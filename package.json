@@ -1,5 +1,5 @@
 {
-  "name": "taskful-server",
+  "name": "achiever-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,6 @@
     "dev": "nodemon src/server.js",
     "migrate": "postgrator --config postgrator-config.js",
     "migrate:test": "env NODE_ENV=test npm run migrate",
-    "migrate:production": "heroku run npm run migrate",
     "start": "node src/server.js",
     "deploy": "git push heroku master",
     "postdeploy": "npm run migrate:production"
@@ -23,14 +22,14 @@
     "helmet": "^3.23.3",
     "knex": "^0.21.4",
     "morgan": "^1.10.0",
-    "pg": "^8.3.0",
-    "postgrator-cli": "^4.0.0",
+    "pg": "^8.5.1",
     "xss": "^1.0.8"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^8.1.1",
     "nodemon": "^2.0.4",
+    "postgrator-cli": "^3.2.0",
     "supertest": "^4.0.2"
   }
 }
